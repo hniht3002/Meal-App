@@ -3,7 +3,7 @@
     "name": "assignment2",
     "slug": "assignment2",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -25,6 +25,19 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },"plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": ["./src/assets/fonts/Outfit-Regular.ttf"]
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "DEFAULT"
+        }
+      ]
+    ]
   }
 }
