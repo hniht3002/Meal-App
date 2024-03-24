@@ -13,7 +13,9 @@ function Favourite() {
 
                 <View style={styles.wrapper}>
                     <View style = {{flex: 1}}>
-                        <ScrollView contentContainerStyle = {favMeal.length > 3 ? styles.listWrapper : [styles.listWrapper, {justifyContent: "flex-start"}]}>
+                        <ScrollView contentContainerStyle = {favMeal.length > 3 ? 
+                                                            styles.listWrapper : 
+                                                            [styles.listWrapper, {justifyContent: "flex-start"}]}>
                         {favList.length == 0 ? 
                             <CustomText style={{textAlign: "center"}}>Empty</CustomText> : 
                             

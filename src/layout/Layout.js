@@ -28,7 +28,8 @@ function Layout({children, pageName, hidePageName = false}) {
         <View style={styles.layoutWrapper}>
             <StatusBar></StatusBar>
             <Header />
-            {!hidePageName && <View style = {{justifyContent: "center", flexDirection: "row", alignItems: "center", gap: 20}}>
+            {!hidePageName && 
+            <View style = {{justifyContent: "center", flexDirection: "row", alignItems: "center", gap: 20}}>
                 <MaterialIcons name="restaurant-menu" size={24} color={"black"} />
                 <CustomText style={isPortrait ? styles.title : [styles.title, {paddingVertical: 10}]}>{pageName}</CustomText>
                 <MaterialIcons name="restaurant-menu" size={24} color={"black"} />
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontSize: 30,
         fontWeight: "bold",
-        paddingVertical: 30,
+        paddingVertical: 10,
         paddingBottom: 10
     },
 })

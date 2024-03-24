@@ -14,7 +14,6 @@ function MealDetail() {
     const meal = route.params.meal
     const favMeal = useSelector(state => state.favMealsReducer.el)
     const dispatch = useDispatch()
-    console.log(meal)
     String.prototype.capitalizeTheFirstLetter = function() {
         return this.charAt(0).toUpperCase() + this.slice(1);
     };
@@ -57,7 +56,7 @@ function MealDetail() {
                         <View style = {styles.button}>
                             
                             {favMeal.includes(meal.id) ? 
-                                <CustomButton bg = {false} onPress={() => {console.log(meal.id); dispatch(toggle(meal.id))}}> Remove from Favourite</CustomButton> : 
+                                <CustomButton bg = {false} onPress={() => {dispatch(toggle(meal.id))}}> Remove from Favourite</CustomButton> : 
                                 <CustomButton bg = {true} onPress={() => {dispatch(toggle(meal.id))}}>Add to Favourite</CustomButton>
                             }
                         </View>
@@ -93,13 +92,13 @@ function MealDetail() {
                         </View>
                     </View> 
 
-                    <List type="order" title="Steps" list={meal.steps} />
                     <List title={"Ingredients"} list={meal.ingredients} />
+                    <List type="order" title="Steps" list={meal.steps} />
 
                     <View style = {styles.button}>
                         
                         {favMeal.includes(meal.id) ? 
-                            <CustomButton bg = {false} onPress={() => {console.log(meal.id); dispatch(toggle(meal.id))}}> Remove from Favourite</CustomButton> : 
+                            <CustomButton bg = {false} onPress={() => {dispatch(toggle(meal.id))}}> Remove from Favourite</CustomButton> : 
                             <CustomButton bg = {true} onPress={() => {dispatch(toggle(meal.id))}}>Add to Favourite</CustomButton>
                         }
                     </View>

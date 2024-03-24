@@ -15,7 +15,9 @@ function MealList() {
         <Layout pageName={category}>
             <View style={isPortrait ? styles.wrapper : [styles.wrapper, {marginTop: 0}]}>
                 <View style = {{flex: 1}}>
-                    <ScrollView contentContainerStyle = {meals.length > 3 ? styles.listWrapper : [styles.listWrapper, {justifyContent: "flex-start"}]}> 
+                    <ScrollView contentContainerStyle = {meals.length > 3 ? 
+                                                        styles.listWrapper : 
+                                                        [styles.listWrapper, {justifyContent: "flex-start"}]}> 
                         {meals.map((m, index) => {
                             return (<Meal key={index} meal={m} isFavoured = {favMeal.includes(m.id)}/>)
                         })}
